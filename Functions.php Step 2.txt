@@ -1,0 +1,18 @@
+Here just added for text field, you can add other fields in same way.
+
+woocommerce_available_variation filter can be found within the class includes-class-wc-product-variable
+
+// Add New Variation Settings
+add_filter( 'woocommerce_available_variation', 'load_variation_settings_fields' );
+/**
+ * Add custom fields for variations
+ *
+*/
+function load_variation_settings_fields( $variations ) {
+	
+	// duplicate the line for each field
+	$variations['text_field'] = get_post_meta( $variations[ 'variation_id' ], '_text_field', true );
+	
+	return $variations;
+}
+

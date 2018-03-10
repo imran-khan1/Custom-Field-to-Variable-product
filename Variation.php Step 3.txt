@@ -1,0 +1,7 @@
+Override WooCommerce Templates/Single-Product/Add-to-cart/variations.php and add below code in it for text field. All the other fields code can be added in variations.php file but the relevant field must be fetched in functions.php first.
+
+
+<div class="woocommerce-variation-custom-text-field">
+      {{{ data.variation.text_field }}}
+</div>
+
